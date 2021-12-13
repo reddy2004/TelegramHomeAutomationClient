@@ -1,0 +1,22 @@
+{
+	"list":[
+		{"ip": "192.168.1.180", "port": "8899", "alias": "backoldshed", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.183", "port": "8899", "alias": "parking", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.184", "port": "8899", "alias": "sitesideback", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.185", "port": "8899", "alias": "sitesidemiddle", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.177", "port": "8899", "alias": "sitesidefront", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.175", "port": "8899", "alias": "frontdoor", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.155", "port": "8899", "alias": "backnewshed", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.198", "port": "8899", "alias": "gate", "username": "admin", "password": "", "xscale" :1280, "yscale" :720},
+		{"ip": "192.168.1.187", "port": "8899", "alias": "topgate", "username": "admin", "password": "", "xscale" :1280, "yscale" :720}
+	],
+	"mapper" : {
+		"/cams/snapshot/all": ["backoldshed","parking","sitesideback","sitesidemiddle","sitesidefront","frontdoor","backnewshed","gate","topgate"],
+		"/cams/snapshot/bell": ["gate"],
+		"/cams/snapshot/door": ["frontdoor"],
+		"/cams/snapshot/gate": ["topgate","frontdoor"],
+		"/cams/snapshot/parking": ["parking","frontdoor"],
+		"/cams/snapshot/site": ["parking","sitesidemiddle","sitesidefront","backnewshed"],
+		"/cams/snapshot/back": ["sitesideback","sitesidemiddle","backnewshed"]
+	}
+}

@@ -1,0 +1,298 @@
+{
+	"version": "1.00",
+	"notes" : "This is the first code version",
+	"environmentSettings" : {
+		"os" : "windows",
+		"slash" : "\\",
+		"move" : "move",
+		"copy" : "copy",
+		"delete" : "del",
+		"newfolder" : "mkdir",
+		"login_cmd" : "curl \"http://192.168.1.3/login.cgi\"   -H \"Connection: keep-alive\"   -H \"Cache-Control: max-age=0\"   -H \"Upgrade-Insecure-Requests: 1\"   -H \"Origin: http://192.168.1.3\"   -H \"Content-Type: application/x-www-form-urlencoded\"   -H \"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\"   -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\"   -H \"Referer: http://192.168.1.3/login.htm\"   -H \"Accept-Language: en-US,en;q=0.9\"   -H \"Cookie: SessionID=\"   --data \"username=Admin&password=&submit.htm%3Flogin.htm=Send\" --insecure",
+		"set_repeater_cmd" : "curl \"http://192.168.1.3/form2RepeaterSetup.cgi\"   -H \"Connection: keep-alive\"   -H \"Cache-Control: max-age=0\"   -H \"Upgrade-Insecure-Requests: 1\"   -H \"Origin: http://192.168.1.3\"   -H \"Content-Type: application/x-www-form-urlencoded\"   -H \"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\"   -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\"   -H \"Referer: http://192.168.1.3/wlrepeater.htm\"   -H \"Accept-Language: en-US,en;q=0.9\"   -H \"Cookie: SessionID=\"   --data \"RepeaterMode=on&RepeaterSSID=ABCJIO&WifiSecurity=&startScanUplinkAp=0&save=Apply&submit.htm%3Fwlrepeater.htm=Send\" --insecure",
+		"reverseSSHCommand" : "ssh -i id_rsa -N -R 6200:localhost:5900 root@68.183.81.143",
+		"reverseSSHForPort22" : {
+			"comment" : "Forwards remote port random(6000-7000) to local port 22 for ssh",
+			"localhost" : "localhost",
+			"remotehost" : "root@68.183.81.143",
+			"rsaFile" :  "id_rsa",
+			"remotePortStart" : 6000,
+			"remotePortEnd" : 7000
+		},
+		"reverseSSHForPort5900" :{
+			"comment" : "Forwards remote port random(6000-7000) to local port 5900 for VNC",
+			"localhost" : "localhost",
+			"remotehost" : "root@68.183.81.143",
+			"rsaFile" :  "id_rsa",
+			"remotePortStart" : 6000,
+			"remotePortEnd" : 7000
+		},
+		"reverseSSHForPort80" :{
+			"comment" : "Forwards remote port random(6000-7000) to local port 80 for http traffic",
+			"localhost" : "localhost",
+			"remotehost" : "root@68.183.81.143",
+			"rsaFile" :  "id_rsa",
+			"remotePortStart" : 6000,
+			"remotePortEnd" : 7000
+		},
+		"listFolder" : "dir"
+	},
+	"environmentSettingsLinux" : {
+		"os" : "unix",
+		"slash" : "/",
+		"move" : "mv",
+		"copy" : "cp",
+		"delete" : "rm",
+		"newfolder" : "mkdir",
+		"login_cmd" : "curl \"http://192.168.1.3/login.cgi\"   -H \"Connection: keep-alive\"   -H \"Cache-Control: max-age=0\"   -H \"Upgrade-Insecure-Requests: 1\"   -H \"Origin: http://192.168.1.3\"   -H \"Content-Type: application/x-www-form-urlencoded\"   -H \"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\"   -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\"   -H \"Referer: http://192.168.1.3/login.htm\"   -H \"Accept-Language: en-US,en;q=0.9\"   -H \"Cookie: SessionID=\"   --data \"username=Admin&password=&submit.htm%3Flogin.htm=Send\" --insecure",
+		"set_repeater_cmd" : "curl \"http://192.168.1.3/form2RepeaterSetup.cgi\"   -H \"Connection: keep-alive\"   -H \"Cache-Control: max-age=0\"   -H \"Upgrade-Insecure-Requests: 1\"   -H \"Origin: http://192.168.1.3\"   -H \"Content-Type: application/x-www-form-urlencoded\"   -H \"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\"   -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\"   -H \"Referer: http://192.168.1.3/wlrepeater.htm\"   -H \"Accept-Language: en-US,en;q=0.9\"   -H \"Cookie: SessionID=\"   --data \"RepeaterMode=on&RepeaterSSID=ABCJIO&WifiSecurity=&startScanUplinkAp=0&save=Apply&submit.htm%3Fwlrepeater.htm=Send\" --insecure",
+		"reverseSSHCommand" : "ssh -N -R 6200:localhost:5900 root@68.183.81.143",
+		"reverseSSHForPort22" : {
+			"comment" : "Forwards remote port random(6000-7000) to local port 22 for ssh",
+			"localhost" : "localhost",
+			"remotehost" : "root@68.183.81.143",
+			"rsaFile" :  "id_rsa",
+			"remotePortStart" : 6000,
+			"remotePortEnd" : 7000
+		},
+		"reverseSSHForPort5900" :{
+			"comment" : "Forwards remote port random(6000-7000) to local port 5900 for VNC",
+			"localhost" : "localhost",
+			"remotehost" : "root@68.183.81.143",
+			"rsaFile" :  "id_rsa",
+			"remotePortStart" : 6000,
+			"remotePortEnd" : 7000
+		},
+		"reverseSSHForPort80" :{
+			"comment" : "Forwards remote port random(6000-7000) to local port 80 for http traffic",
+			"localhost" : "localhost",
+			"remotehost" : "root@68.183.81.143",
+			"rsaFile" :  "id_rsa",
+			"remotePortStart" : 6000,
+			"remotePortEnd" : 7000
+		},
+		"listFolder" : "ps -ef"
+	},
+	"remoteSocketIO" : {
+		"enabled": true,
+		"server" : "http://nightfoxsecurity.com:8443",
+		"secretKey" : "asdfoubaosdfasdflasjdflkenrwseae",
+		"username" : "ooruHomeClient",
+		"password" : "ooruHomeClient"
+	},
+	"localCifsMount" : {
+		"enabled": true,
+		"server": "\\\\192.168.1.151\\Air-Disk\\",
+		"username": "Vikrama",
+		"password": "Reddy",
+		"command" : "sudo mount -t cifs //192.168.1.151/AirDisk-A CIFS/ -o user=AirDisk,sec=ntlm,vers=1.0",
+		"folderPath" : "CIFS"
+	},
+	"localNFSMount" : {
+		"enabled": true,
+		"server": "\\\\192.168.1.151\\Air-Disk\\",
+		"username": "Vikrama",
+		"password": "Reddy",
+		"command" : "sudo mount -f etc",
+		"folderPath" : "NFS"
+	},
+	  "telegram": {
+	    "webhook": "",
+	    "isPolling": true,
+	    "personalTelegramId" : 12345678,
+	    "inlineKeyboards": [
+	      {
+	        "encoded": false,
+	        "code": "/start",
+	        "display": "Select node type",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "MQTT",
+	              "callback_data": "/mqtt"
+	            },
+	            {
+	              "text": "SOCKET IO",
+	              "callback_data": "/socketio"
+	            },
+	            {
+	              "text": "IFTTT",
+	              "callback_data": "/ifttt"
+	            },
+	            {
+	              "text": "NFOX",
+	              "callback_data": "/nfox"
+	            },
+	            {
+	              "text": "EXECUTE",
+	              "callback_data": "/exec"
+	            },
+	            {
+	              "text": "CAMS",
+	              "callback_data": "/cams"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": false,
+	        "code": "/mqtt",
+	        "display": "Select mqtt node",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "ESP01",
+	              "callback_data": "/mqtt/esp01"
+	            },
+	            {
+	              "text": "MQTTDash",
+	              "callback_data": "/mqtt/mqttdash"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": false,
+	        "code": "/socketio",
+	        "display": "Select message to pass?",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "STATUS",
+	              "callback_data": "/socketio/status"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": false,
+	        "code": "/ifttt",
+	        "display": "Select ifttt device command",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "HALL On",
+	              "callback_data": "/ifttt/hallon"
+	            },
+	            {
+	              "text": "HALL Off",
+	              "callback_data": "/ifttt/halloff"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": false,
+	        "code": "/nfox",
+	        "display": "Select nfox node",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "BELL",
+	              "callback_data": "/nfox/Nightfox_1000001"
+	            },
+	            {
+	              "text": "INNERBELL",
+	              "callback_data": "/nfox/Nightfox_1000002"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": true,
+	        "code": "/nfox/{NFOX}",
+	        "display": "Select {NFOX} operation",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "On",
+	              "callback_data": "/nfox/{NFOX}/on"
+	            },
+	            {
+	              "text": "Off",
+	              "callback_data": "/nfox/{NFOX}/off"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": true,
+	        "code": "/nfox/{NFOX}/{OP}",
+	        "display": "Select {NFOX} [Turn {OP}] time, or you may choose to permanently keep it turned {OP}",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "30 Min",
+	              "callback_data": "/nfox/{NFOX}/{OP}/30"
+	            },
+	            {
+	              "text": "1 Hour",
+	              "callback_data": "/nfox/{NFOX}/{OP}/60"
+	            },
+	            {
+	              "text": "Permanently",
+	              "callback_data": "/nfox/{NFOX}/{OP}/0"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": false,
+	        "code": "/exec",
+	        "display": "Select Command to Execute",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "REVERSE SSH",
+	              "callback_data": "/exec/reversessh"
+	            },
+	            {
+	              "text": "PS -EF",
+	              "callback_data": "/exec/ps-ef"
+	            },
+	            {
+	              "text": "Status",
+	              "callback_data": "/exec/status"
+	            },
+	            {
+	              "text": "Reboot",
+	              "callback_data": "/exec/reboot"
+	            }
+	          ]
+	        ]
+	      },
+	      {
+	        "encoded": false,
+	        "code": "/cams",
+	        "display": "Select Camera group",
+	        "keyboard": [
+	          [
+	            {
+	              "text": "ALL",
+	              "callback_data": "/cams/snapshot/all"
+	            },
+	            {
+	              "text": "BACK",
+	              "callback_data": "/cams/snapshot/back"
+	            },
+	            {
+	              "text": "GATE",
+	              "callback_data": "/cams/snapshot/gate"
+	            },
+	            {
+	              "text": "DOOR",
+	              "callback_data": "/cams/snapshot/door"
+	            }
+	          ]
+	        ]
+	      }
+	    ]
+	  },
+	"chokidar" : {
+		"enabled": true,
+		"watchedFolder" : "FTP2\\",
+		"deleteAfterTransfer" : true,
+		"shouldCopyToCifsShare" : false,
+		"shouldCopyToNFSShare" : false
+	}
+}

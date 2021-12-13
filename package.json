@@ -1,0 +1,29 @@
+{
+  "name": "home_bot_fw",
+  "version": "1.0.0",
+  "description": "homebot_fw",
+  "main": "main.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "Vikrama Reddy",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "assert": "^2.0.0",
+    "async": "^3.2.2",
+    "aws-sign2": "^0.7.0",
+    "chokidar": "^3.5.2",
+    "extend": "^3.0.2",
+    "hashmap": "^2.4.0",
+    "internet-available": "^1.0.0",
+    "jimp": "^0.16.1",
+    "json-stringify-safe": "^5.0.1",
+    "node-telegram-bot-api": "^0.55.0",
+    "onvif": "^0.6.5",
+    "request": "^2.88.2",
+    "socket.io-client": "^4.4.0",
+    "tough-cookie": "^4.0.0",
+    "xml2js": "^0.4.23"
+  }
+}
